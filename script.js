@@ -18,4 +18,21 @@ function draw() {
 }
 
 // Draw snake
-function drawSnake() {}
+function drawSnake() {
+  snake.forEach((segment) => {
+    const snakeElement = createGameElement('div', 'snake');
+    setPosition(snakeElement, segment);
+  });
+}
+
+// Create a snake or food cube/div
+function createGameElement(tag, className) {
+  const element = document.createElement(tag);
+  element.className = className;
+}
+
+// Set position of the snake or food
+function setPosition(element, position) {
+  element.style.gridColumn = position.x;
+  element.style.gridRow = position.y;
+}
