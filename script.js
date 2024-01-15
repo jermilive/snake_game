@@ -62,6 +62,5 @@ function gennerateFood() {
 
 // Moving the snake
 function move() {
-  const head = 
+  const head = { ...snake[0] };
 }
-
